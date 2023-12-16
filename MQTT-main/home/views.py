@@ -70,40 +70,40 @@ def Make_previsions(output):
     x_plot_dw = np.array([0,-1,-2,-3,-4,-5,-6,-7,-8]).reshape(-1,1)
     y_plot_dw = np.array([l_coef_dw + a_coef_dw * x_plot_dw]).reshape(-1,1)
 
-    load_4kgf = 4
-    load_3kgf = 3
-    load_2kgf = 2
-    load_1kgf = 1
-    no_load_kfg = 0
+    load_4uf = 4
+    load_3uf = 3
+    load_2uf = 2
+    load_1uf = 1
+    no_load_uf = 0
 
-    #4kgf
-    off_download_4 = round(float(l_coef_up + a_coef_up * load_4kgf),4)
+    #4uf
+    off_download_4 = round(float(l_coef_up + a_coef_up * load_4uf),4)
     down_4 = "%.4f" % off_download_4 
-    off_loading_4 = round(float(l_coef_dw + a_coef_dw * (-load_4kgf)),4)
+    off_loading_4 = round(float(l_coef_dw + a_coef_dw * (-load_4uf)),4)
     load_4 = "%.4f" % off_loading_4 
 
-    #3kgf
-    off_download_3 = round(float(l_coef_up + a_coef_up * load_3kgf),4)
+    #3uf
+    off_download_3 = round(float(l_coef_up + a_coef_up * load_3uf),4)
     down_3 = "%.4f" % off_download_3 
-    off_loading_3 = round(float(l_coef_dw + a_coef_dw * (-load_3kgf)),4)
+    off_loading_3 = round(float(l_coef_dw + a_coef_dw * (-load_3uf)),4)
     load_3 = "%.4f" % off_loading_3 
 
-    #2kgf
-    off_download_2 = round(float(l_coef_up + a_coef_up * load_2kgf),4)
+    #2uf
+    off_download_2 = round(float(l_coef_up + a_coef_up * load_2uf),4)
     down_2 = "%.4f" % off_download_2 
-    off_loading_2 = round(float(l_coef_dw + a_coef_dw * (-load_2kgf)),4)
+    off_loading_2 = round(float(l_coef_dw + a_coef_dw * (-load_2uf)),4)
     load_2 = "%.4f" % off_loading_2 
 
-    #1kgf
-    off_download_1 = round(float(l_coef_up + a_coef_up * load_1kgf),4)
+    #1uf
+    off_download_1 = round(float(l_coef_up + a_coef_up * load_1uf),4)
     down_1 = "%.4f" % off_download_1 
-    off_loading_1 = round(float(l_coef_dw + a_coef_dw * (-load_1kgf)),4)
+    off_loading_1 = round(float(l_coef_dw + a_coef_dw * (-load_1uf)),4)
     load_1 = "%.4f" % off_loading_1 
 
-    #0kgf
-    off_download = round(float(l_coef_up + a_coef_up * no_load_kfg),4)
+    #0uf
+    off_download = round(float(l_coef_up + a_coef_up * no_load_uf),4)
     down = "%.4f" % off_download #Previsões
-    off_loading = round(float(l_coef_dw + a_coef_dw * no_load_kfg),4)
+    off_loading = round(float(l_coef_dw + a_coef_dw * no_load_uf),4)
     load = "%.4f" % off_loading #Previsões
 
     previsions = [off_download_4, off_loading_4, off_download_3, off_loading_3, off_download_2, off_loading_2, off_download_1, off_loading_1, off_download, off_loading]
@@ -112,7 +112,7 @@ def Make_previsions(output):
 
 
 def Backlash(prevs):
-    backlash_string_1 = ("Result: Test Accepted (Within the Backlash Limits)")
+    backlash_string_1 = ("Resultado obtido pelo cálculo: |Deslocamento 0 uf Up - Deslocamento 0 uf Down|")
     backlash_string_2 = ("Result: Test Not Accepted (Outside the Backlash Limits)")
     backlash_string_3 = ("Backlash (Degree): Invalid")
 
